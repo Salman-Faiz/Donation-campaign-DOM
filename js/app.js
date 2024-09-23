@@ -1,22 +1,34 @@
 import {
   add,
+  donateMoney,
   getInnerText,
   getValue,
   setValue,
   substraction,
 } from "./utilities.js";
 
-const donateAmount = document.getElementById("donateAmount");
-donateAmount.addEventListener("click", function () {
-  // to add the donation money to the UI
-  const inputAmount = getValue("inputAmount");
-  const innerTextAmount = getInnerText("quotaAmount");
-  const sum = add(innerTextAmount, inputAmount);
-  setValue("quotaAmount", sum);
-  // reduce money from current balance
-  const availableBalance = getInnerText("availableBalance");
-  const remainingBalance = substraction(availableBalance, inputAmount);
-  setValue("availableBalance", remainingBalance);
+// After clicking donate Now button the amount updates from Quota Total Donation  and User Available Balance.
+
+// Quota Donation
+const donateAmountQuota = document.getElementById("donateAmountQuota");
+
+donateAmountQuota.addEventListener("click", function () {
+  // in this donateAmount Function need inputAmountId,donatedAmountId,availableBalanceId as parameters.
+  donateMoney("inputAmountQuota", "quotaAmount", "availableBalance");
 });
 
-// inputAmount donateAmount
+// Noakhali Donation
+const donateAmountNoakhali = document.getElementById("donateAmountNoakhali");
+
+donateAmountNoakhali.addEventListener("click", function () {
+  // in this donateAmount Function need inputAmountId,donatedAmountId,availableBalanceId as parameters.
+  donateMoney("inputAmountNoakhali", "noakhaliAmount", "availableBalance");
+});
+
+// Feni Donation
+const donateAmountFeni = document.getElementById("donateAmountFeni");
+
+donateAmountFeni.addEventListener("click", function () {
+  // in this donateAmount Function need inputAmountId,donatedAmountId,availableBalanceId as parameters.
+  donateMoney("inputAmountFeni", "feniAmount", "availableBalance");
+});

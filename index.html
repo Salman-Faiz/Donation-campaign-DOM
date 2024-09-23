@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation campaign</title>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- google font lexend -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary-color': 'rgb(162, 235, 52)',
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="bg-slate-200">
+        <div class="container mx-auto flex justify-between items-center pt-3 pb-6">
+            <div class="text-xl font-bold">
+                <button class="bg-primary-color px-3 py-2 rounded-lg">Blog</button>
+            </div>
+            <div class="flex justify-center items-center gap-4">
+                <img src="./assets/logo.png" alt="">
+                <h1 class="text-2xl font-bold">Donation Bangladesh</h1>
+
+            </div>
+            <div class="flex justify-center items-center gap-3">
+                <img src="./assets/coin.png" alt="">
+                <p class="text-xl font-bold">5500</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

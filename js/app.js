@@ -32,3 +32,19 @@ donateAmountFeni.addEventListener("click", function () {
   // in this donateAmount Function need inputAmountId,donatedAmountId,availableBalanceId as parameters.
   donateMoney("inputAmountFeni", "feniAmount", "availableBalance");
 });
+
+// Toggle donation and History contents
+const donationContainer = document.getElementById("donationContainer");
+const historyContainer = document.getElementById("historyContainer");
+const btnDonation = document.getElementById("btnDonation");
+const btnHistory = document.getElementById("btnHistory");
+
+btnDonation.addEventListener("click", function () {
+  donationContainer.style.display = "block";
+  historyContainer.style.display = "none";
+});
+
+btnHistory.addEventListener("click", function () {
+  donationContainer.style.display = "none";
+  historyContainer.style.display = "block";
+});

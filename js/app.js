@@ -24,6 +24,7 @@ donateAmountQuota.addEventListener("click", function () {
     showModal();
 
     // donation records add to the history section dynamically
+
     const inputAmount = document.getElementById("inputAmountQuota").value;
     const title = document.getElementById("quotaTitle").innerText;
     donationRecords(inputAmount, title);
@@ -39,11 +40,13 @@ const donateAmountNoakhali = document.getElementById("donateAmountNoakhali");
 donateAmountNoakhali.addEventListener("click", function () {
   // in this donateAmount Function need inputAmountId,donatedAmountId,availableBalanceId as parameters.
   donateMoney("inputAmountNoakhali", "noakhaliAmount", "availableBalance");
+
   // show modal after successful donation
   if (getValue("inputAmountNoakhali")) {
     showModal();
 
     // donation records add to the history section dynamically
+
     const inputAmount = document.getElementById("inputAmountNoakhali").value;
     const title = document.getElementById("noakhaliTitle").innerText;
     donationRecords(inputAmount, title);
@@ -59,11 +62,13 @@ const donateAmountFeni = document.getElementById("donateAmountFeni");
 donateAmountFeni.addEventListener("click", function () {
   // in this donateAmount Function need inputAmountId,donatedAmountId,availableBalanceId as parameters.
   donateMoney("inputAmountFeni", "feniAmount", "availableBalance");
+
   // show modal after successful donation
   if (getValue("inputAmountFeni")) {
     showModal();
 
     // donation records add to the history section dynamically
+
     const inputAmount = document.getElementById("inputAmountFeni").value;
     const title = document.getElementById("feniTitle").innerText;
     donationRecords(inputAmount, title);
@@ -79,8 +84,10 @@ window.onload = function () {
   const historyContainer = document.getElementById("historyContainer");
   const btnDonation = document.getElementById("btnDonation");
   const btnHistory = document.getElementById("btnHistory");
-
+  // default btn color
   btnDonation.style.background = "rgb(162, 235, 52)";
+
+  // clicking the donation btn changes textColor,bg-color and border
 
   btnDonation.addEventListener("click", function () {
     donationContainer.style.display = "block";
@@ -95,6 +102,8 @@ window.onload = function () {
     btnDonation.style.color = "black";
     btnHistory.style.color = "rgb(189, 187, 210)";
   });
+
+  // clicking the history btn changes textColor,bg-color and border
 
   btnHistory.addEventListener("click", function () {
     donationContainer.style.display = "none";

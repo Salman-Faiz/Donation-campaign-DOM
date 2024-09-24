@@ -47,26 +47,35 @@ export function donateMoney(
   donatedAmountId,
   availableBalanceId
 ) {
-  {
-    const inputAmount = getValue(inputAmountId);
+  const inputAmount = getValue(inputAmountId);
+  const availableBalance = getInnerText(availableBalanceId);
 
-    if (inputAmount > 0) {
+  if (inputAmount > 0) {
+    if (availableBalance >= inputAmount) {
       const innerTextAmount = getInnerText(donatedAmountId);
       const sum = add(innerTextAmount, inputAmount);
-
       // Reduce money from current balance
-      const availableBalance = getInnerText(availableBalanceId);
       const remainingBalance = substraction(availableBalance, inputAmount);
-
-      if (availableBalance >= inputAmount) {
-        // Update quotaAmount and availableBalance in the UI
-        setValue(donatedAmountId, sum);
-        setValue(availableBalanceId, remainingBalance);
-      } else {
-        alert("Insufficient Balance");
-      }
+      // Update quotaAmount and availableBalance in the UI
+      setValue(donatedAmountId, sum);
+      setValue(availableBalanceId, remainingBalance);
     } else {
-      alert("Invalid input: Amount must be a positive number");
+      document.getElementById(inputAmountId).value = "";
+      return alert("Insufficient Balance");
     }
+  } else {
+    document.getElementById(inputAmountId).value = "";
+    return alert("Invalid input: Amount must be a positive number");
   }
+}
+
+// show Modal
+
+export function showModal() {
+  const modal = document.getElementById("congratsModal");
+  const closeModal = document.getElementById("closeModal");
+  modal.classList.remove("hidden");
+  closeModal.addEventListener("click", function () {
+    modal.classList.add("hidden");
+  });
 }

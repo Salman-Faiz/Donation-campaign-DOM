@@ -79,3 +79,16 @@ export function showModal() {
     modal.classList.add("hidden");
   });
 }
+
+// history container elements
+export function donationRecords(amount, title) {
+  const historyDiv = document.createElement("div");
+  // donation records date
+  const donatedTime = new Date().toString();
+  historyDiv.innerHTML = ` <div class="border-2 border-gray-300 mt-10 rounded-lg p-6">
+                <h1 class="text-xl text-black font-bold">${amount} Taka is Donated ${title}</h1>
+                  <p class='text-gray-500'><strong>Date:</strong> ${donatedTime}</p>
+            </div>`;
+
+  document.getElementById("historyContainer").appendChild(historyDiv);
+}

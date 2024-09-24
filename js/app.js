@@ -1,6 +1,7 @@
 import {
   add,
   donateMoney,
+  donationRecords,
   getInnerText,
   getValue,
   setValue,
@@ -21,6 +22,11 @@ donateAmountQuota.addEventListener("click", function () {
   // show modal after successful donation
   if (getValue("inputAmountQuota")) {
     showModal();
+
+    // donation records add to the history section dynamically
+    const inputAmount = document.getElementById("inputAmountQuota").value;
+    const title = document.getElementById("quotaTitle").innerText;
+    donationRecords(inputAmount, title);
     document.getElementById("inputAmountQuota").value = "";
   } else {
     return 0;
@@ -36,6 +42,11 @@ donateAmountNoakhali.addEventListener("click", function () {
   // show modal after successful donation
   if (getValue("inputAmountNoakhali")) {
     showModal();
+
+    // donation records add to the history section dynamically
+    const inputAmount = document.getElementById("inputAmountNoakhali").value;
+    const title = document.getElementById("noakhaliTitle").innerText;
+    donationRecords(inputAmount, title);
     document.getElementById("inputAmountNoakhali").value = "";
   } else {
     return 0;
@@ -51,6 +62,11 @@ donateAmountFeni.addEventListener("click", function () {
   // show modal after successful donation
   if (getValue("inputAmountFeni")) {
     showModal();
+
+    // donation records add to the history section dynamically
+    const inputAmount = document.getElementById("inputAmountFeni").value;
+    const title = document.getElementById("feniTitle").innerText;
+    donationRecords(inputAmount, title);
     document.getElementById("inputAmountFeni").value = "";
   } else {
     return 0;

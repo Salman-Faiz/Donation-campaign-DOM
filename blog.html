@@ -4,37 +4,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accordion Example</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Blogs</title>
+    <!-- tailwind and daisy UI cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/4a7bf2abd5.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
-    <div class="accordion">
-        <div class="accordion-item">
-            <button class="accordion-header">Section 1</button>
-            <div class="accordion-content">
-                <p>Content for section 1.</p>
+    <div class="bg-green-100">
+        <div class="container mx-auto flex justify-around lg:justify-between items-center pt-3 pb-6">
+            <div class="lg:text-xl font-bold">
+                <button class="bg-primary-color px-3 py-2 rounded-lg">Blog</button>
             </div>
-        </div>
-
-        <div class="accordion-item">
-            <button class="accordion-header">Section 2</button>
-            <div class="accordion-content">
-                <p>Content for section 2.</p>
+            <div class="flex justify-center items-center gap-2 lg:gap-4">
+                <img class="w-[30px] lg:w-12" src="./assets/logo.png" alt="">
+                <h1 class="lg:text-2xl font-bold">Donation Bangladesh</h1>
             </div>
-        </div>
-
-        <div class="accordion-item">
-            <button class="accordion-header">Section 3</button>
-            <div class="accordion-content">
-                <p>Content for section 3.</p>
+            <div class="flex justify-center items-center lg:gap-3 gap-1">
+                <img class="lg:w-[30px] w-[20px]" src="./assets/coin.png" alt="">
+                <p class="lg:text-xl font-bold"><span id="availableBalance">7500</span> BDT</p>
             </div>
         </div>
 
     </div>
+    <!-- Accordion -->
+    <div class="bg-blue-100 pt-10 lg:pt-16 pb-16">
 
-    <script src="script.js"></script>
+        <div class="container mx-auto">
+            <h1 class="font-bold text-3xl ps-4">Important FAQ <i class="fa-solid fa-question text-6xl"></i>
+            </h1>
+            <div class="collapse collapse-arrow ">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">1. What is the Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                    <p>The **Document Object Model (DOM)** is a programming interface for HTML and XML documents. It
+                        represents the document as a tree of nodes, where each element is an object. JavaScript can use
+                        the DOM to manipulate and interact with these nodes, allowing dynamic changes to content,
+                        structure, and styles. The DOM is a live representation, meaning changes to the document are
+                        immediately reflected. It’s essential for handling events like clicks and form submissions in
+                        web development.</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow ">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">2. How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                    <p>We can select an item in multiple ways.such as:<br>
+                        1. document.getElementById(): Selects an element by its id.<br>
+                        2. document.querySelector(): Selects the first element that matches a CSS selector.<br>
+                        3. document.querySelectorAll(): Selects all elements matching a CSS selector.<br>
+                        4. document.getElementsByClassName(): Selects elements by their class name.<br>
+                        5. document.getElementsByTagName(): Selects elements by their tag name.</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow ">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">3. What is event delegation in the context of the DOM,
+                    and why is it useful?</div>
+                <div class="collapse-content">
+                    <p>Event delegation is a technique in the DOM where you attach a single event listener to a
+                        parent element rather than each child element. This works because events in the DOM propagate
+                        (or "bubble") up through the ancestor elements.<br>
+
+                        <strong>Why it's useful:</strong><br>
+                        1. <strong>Performance:</strong>: Instead of adding event listeners to multiple child elements,
+                        one listener
+                        on the parent can handle them all, reducing memory usage.<br>
+                        2. <strong>Dynamic content:</strong> It allows event handling for dynamically added elements, as
+                        the parent
+                        can capture events even for children added after the event listener was attached.<br>
+                        3. <strong>Simpler code:</strong> Fewer event listeners mean cleaner, more maintainable code.
+                    </p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow ">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">4. How do you manipulate an element's attributes and
+                    styles using the DOM?</div>
+                <div class="collapse-content">
+                    <p>You can manipulate an element's attributes and styles using the DOM as follows:<br>
+
+                        1. <strong>Attributes:</strong><br>
+                        - setAttribute(): Sets or updates an attribute.<br>
+                        - getAttribute(): Retrieves an attribute's value.<br>
+                        - removeAttribute(): Removes an attribute.<br>
+
+                        2. <strong>Styles:</strong><br>
+                        - style: Modifies inline CSS styles.<br>
+                        - classList.add() / classList.remove()`: Adds or removes CSS classes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 
 </html>

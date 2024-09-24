@@ -17,6 +17,7 @@ donateAmountQuota.addEventListener("click", function () {
   // in this donateAmount Function need inputAmountId,donatedAmountId,availableBalanceId as parameters.
 
   donateMoney("inputAmountQuota", "quotaAmount", "availableBalance");
+
   // show modal after successful donation
   if (getValue("inputAmountQuota")) {
     showModal();
@@ -56,18 +57,40 @@ donateAmountFeni.addEventListener("click", function () {
   }
 });
 
-// Toggle donation and History contents
-const donationContainer = document.getElementById("donationContainer");
-const historyContainer = document.getElementById("historyContainer");
-const btnDonation = document.getElementById("btnDonation");
-const btnHistory = document.getElementById("btnHistory");
+window.onload = function () {
+  // Toggle donation and History contents with clicking the button
+  const donationContainer = document.getElementById("donationContainer");
+  const historyContainer = document.getElementById("historyContainer");
+  const btnDonation = document.getElementById("btnDonation");
+  const btnHistory = document.getElementById("btnHistory");
 
-btnDonation.addEventListener("click", function () {
-  donationContainer.style.display = "block";
-  historyContainer.style.display = "none";
-});
+  btnDonation.style.background = "rgb(162, 235, 52)";
 
-btnHistory.addEventListener("click", function () {
-  donationContainer.style.display = "none";
-  historyContainer.style.display = "block";
-});
+  btnDonation.addEventListener("click", function () {
+    donationContainer.style.display = "block";
+    historyContainer.style.display = "none";
+
+    btnDonation.style.background = "rgb(162, 235, 52)";
+    btnHistory.style.background = "";
+
+    btnDonation.style.border = "none";
+    btnHistory.style.border = "1px solid gray";
+
+    btnDonation.style.color = "black";
+    btnHistory.style.color = "rgb(189, 187, 210)";
+  });
+
+  btnHistory.addEventListener("click", function () {
+    donationContainer.style.display = "none";
+    historyContainer.style.display = "block";
+
+    btnDonation.style.background = "";
+    btnHistory.style.background = "rgb(162, 235, 52)";
+
+    btnDonation.style.border = "1px solid gray";
+    btnHistory.style.border = "none";
+
+    btnDonation.style.color = "rgb(189, 187, 210)";
+    btnHistory.style.color = "black";
+  });
+};

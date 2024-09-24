@@ -86,6 +86,8 @@ window.onload = function () {
   const btnHistory = document.getElementById("btnHistory");
   // default btn color
   btnDonation.style.background = "rgb(162, 235, 52)";
+  btnHistory.style.background = "none";
+  btnHistory.style.border = "1px solid gray";
 
   // clicking the donation btn changes textColor,bg-color and border
 
@@ -94,7 +96,7 @@ window.onload = function () {
     historyContainer.style.display = "none";
 
     btnDonation.style.background = "rgb(162, 235, 52)";
-    btnHistory.style.background = "";
+    btnHistory.style.background = "none";
 
     btnDonation.style.border = "none";
     btnHistory.style.border = "1px solid gray";
@@ -109,7 +111,7 @@ window.onload = function () {
     donationContainer.style.display = "none";
     historyContainer.style.display = "block";
 
-    btnDonation.style.background = "";
+    btnDonation.style.background = "none";
     btnHistory.style.background = "rgb(162, 235, 52)";
 
     btnDonation.style.border = "1px solid gray";

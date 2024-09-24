@@ -31,33 +31,35 @@
 
 <body>
     <!-- navbar start -->
-    <div class="bg-green-100 sticky top-0">
-        <div class="container mx-auto flex justify-around lg:justify-between items-center pt-3 pb-6 ">
+    <div id="navbar" class="sticky top-0 bg-green-200/40 backdrop-blur-md shadow-md z-50 transition-all duration-300">
+        <div class="container mx-auto flex justify-around lg:justify-between items-center pt-3 pb-6">
             <div class="lg:text-xl font-bold">
                 <button class="bg-primary-color px-3 py-2 rounded-lg">Blog</button>
             </div>
             <div class="flex justify-center items-center gap-2 lg:gap-4">
                 <img class="w-[30px] lg:w-12" src="./assets/logo.png" alt="">
                 <h1 class="lg:text-2xl font-bold">Donation Bangladesh</h1>
-
             </div>
             <div class="flex justify-center items-center lg:gap-3 gap-1">
                 <img class="lg:w-[30px] w-[20px]" src="./assets/coin.png" alt="">
                 <p class="lg:text-xl font-bold"><span id="availableBalance">7500</span> BDT</p>
             </div>
         </div>
+        <!-- Donation & History Button -->
+        <div class="lg:text-xl font-bold text-center pt-5 lg:pt-6 space-x-4 lg:pb-5 pb-0">
+            <button id="btnDonation" class="bg-primary-color px-3 py-2 rounded-lg ">Donation</button>
+            <button id="btnHistory" class="bg-secondary-color px-3 py-2 rounded-lg ">History</button>
+        </div>
     </div>
     <!-- navbar End -->
 
+
+
     <div class="bg-blue-100 pb-20">
         <!-- Donation section start -->
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto px-5 py-5">
 
-            <div
-                class="lg:text-xl font-bold text-center pt-5 lg:pt-6 space-x-4 sticky top-[76px] lg:top-[85px] bg-blue-100 lg:pb-6 pb-5">
-                <button id="btnDonation" class=" px-3 py-2 rounded-lg ">Donation</button>
-                <button id="btnHistory" class=" px-3 py-2 rounded-lg">History</button>
-            </div>
+
             <!-- Donation cards -->
             <div id="donationContainer">
                 <div class="mt-10 grid grid-cols-1 lg:grid-cols-2 border-2 border-gray-300 rounded-xl p-8  gap-5 ">
